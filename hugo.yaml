@@ -29,13 +29,13 @@ menu:
   main:
     - identifier: posts
       name: Blog
-      url: /posts/
+      pageRef: /posts
       weight: 10
     - identifier: htb
       name: Writeups HTB
-      url: /categories/htb/
+      pageRef: /categories/htb
       weight: 20
     - identifier: about
       name: Sobre mí
-      url: /about/
+      pageRef: /about
       weight: 30

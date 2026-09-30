@@ -1,5 +1,9 @@
-+++
-title = 'About'
-date = 2026-09-30T09:39:55+02:00
-draft = true
-+++
+---
+title: "Sobre mí"
+draft: false
+---
+
+Soy Danibizi. Me interesa la ciberseguridad ofensiva y resuelvo máquinas de Hack The Box.
+
+- GitHub: https://github.com/Danibizi
+- Contacto: tucorreo@ejemplo.com
