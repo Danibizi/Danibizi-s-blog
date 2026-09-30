@@ -1,5 +1,7 @@
 baseURL: "https://dani8448.github.io/Danibizi-s-blog/"
 title: "Danibizi's Blog"
+timeZone: "Europe/Madrid"
+buildFuture: true
 theme: PaperMod
 locale: es
 defaultContentLanguage: e
