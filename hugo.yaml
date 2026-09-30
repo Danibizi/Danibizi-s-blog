@@ -1,29 +1,54 @@
 baseURL: "https://danibizi.github.io/Danibizi-s-blog/"
 title: "Danibizi's Blog"
-timeZone: "Europe/Madrid"
-buildFuture: true
 theme: PaperMod
 locale: es
-defaultContentLanguage: e
+defaultContentLanguage: es
+timeZone: "Europe/Madrid"
+buildFuture: true
+enableRobotsTXT: true
 
 pagination:
   pagerSize: 10
 
 params:
+  env: production
   description: "Blog personal de Danibizi: ciberseguridad, writeups de HTB y más"
   author: "Danibizi"
   defaultTheme: dark
+  images: ["img/logo.png"]
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowToc: true
-  homeInfoParams:
-    Title: "Hola, soy Dani"
-    Content: "Escribo sobre ciberseguridad, resolución de máquinas de HTB y lo que me apetezca."
+  ShowBreadCrumbs: true
+
+  label:
+    text: "Danibizi"
+    icon: "img/logo.png"
+    iconHeight: 30
+
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+
+  profileMode:
+    enabled: true
+    title: "Danibizi"
+    subtitle: "Ciberseguridad, writeups de Hack The Box y otras cosas que me apetece contar."
+    imageUrl: "img/logo.png"
+    imageTitle: "Danibizi"
+    imageWidth: 140
+    imageHeight: 140
+    buttons:
+      - name: Blog
+        url: posts/
+      - name: Writeups HTB
+        url: categories/htb/
+
   socialIcons:
     - name: github
       url: "https://github.com/Danibizi"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/daniel-berzosa-cadenas-1210333a5/"
 
 menu:
   main:
