@@ -18,38 +18,37 @@ collections:
     extension: md
     slug: "{{slug}}"
     fields:
-      - { label: Título, name: title, widget: string, hint: "Ej: HTB Sau - Writeup" }
-      - { label: Fecha, name: date, widget: datetime }
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
-      - { label: Descripción (para Google), name: description, widget: text }
-      - label: Portada
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - label: "Portada"
         name: cover
         widget: object
         required: false
         fields:
-          - { label: Imagen, name: image, widget: image, required: false }
-          - { label: Texto alternativo, name: alt, widget: string, required: false }
-      - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false, hint: "Ej: linux, easy, web" }
-      - label: Contenido
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
+      - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
+      - label: "Contenido"
         name: body
         widget: markdown
         default: |
           **Dificultad:** Fácil | **SO:** Linux
 
           ## Resumen
-          Una o dos frases: qué vulnerabilidad da el acceso y cómo se escala.
 
           ## Reconocimiento
-```bash
+
+          ~~~bash
           nmap -sC -sV -p- 10.10.11.x
-```
+          ~~~
 
           ## Acceso inicial (foothold)
 
           ## Escalada de privilegios
 
           ## Qué falló y cómo se mitigaría
-          - Vulnerabilidad 1 → corrección recomendada
 
           ## Herramientas y lecciones aprendidas
 
@@ -61,19 +60,19 @@ collections:
     extension: md
     slug: "{{slug}}"
     fields:
-      - { label: Título, name: title, widget: string, hint: "Ej: THM Blue - Writeup" }
-      - { label: Fecha, name: date, widget: datetime }
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
-      - { label: Descripción (para Google), name: description, widget: text }
-      - label: Portada
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - label: "Portada"
         name: cover
         widget: object
         required: false
         fields:
-          - { label: Imagen, name: image, widget: image, required: false }
-          - { label: Texto alternativo, name: alt, widget: string, required: false }
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
       - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
-      - label: Contenido
+      - label: "Contenido"
         name: body
         widget: markdown
         default: |
@@ -82,9 +81,10 @@ collections:
           ## Resumen
 
           ## Reconocimiento
-```bash
+
+          ~~~bash
           nmap -sC -sV -p- 10.10.x.x
-```
+          ~~~
 
           ## Explotación
 
@@ -95,33 +95,33 @@ collections:
           ## Lecciones aprendidas
 
   - name: entradas
-    label: Entradas
-    label_singular: Entrada
+    label: "Entradas"
+    label_singular: "Entrada"
     folder: content/entradas
     create: true
     extension: md
     slug: "{{slug}}"
     fields:
-      - { label: Título, name: title, widget: string }
-      - { label: Fecha, name: date, widget: datetime }
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
-      - { label: Descripción (para Google), name: description, widget: text }
-      - label: Portada
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - label: "Portada"
         name: cover
         widget: object
         required: false
         fields:
-          - { label: Imagen, name: image, widget: image, required: false }
-          - { label: Texto alternativo, name: alt, widget: string, required: false }
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
       - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
-      - { label: Contenido, name: body, widget: markdown }
+      - { label: "Contenido", name: body, widget: markdown }
 
   - name: pages
-    label: Páginas
+    label: "Páginas"
     files:
-      - label: Sobre mí
+      - label: "Sobre mí"
         name: about
         file: content/about.md
         fields:
-          - { label: Título, name: title, widget: string }
-          - { label: Contenido, name: body, widget: markdown }
+          - { label: "Título", name: title, widget: string }
+          - { label: "Contenido", name: body, widget: markdown }
