@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: Dani8448/Danibizi-s-blog
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: posts
+    label: Entradas
+    folder: content/posts
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Fecha, name: date, widget: datetime }
+      - { label: "Borrador (actívalo para NO publicar)", name: draft, widget: boolean, default: false }
+      - { label: Descripción (para Google), name: description, widget: text }
+      - { label: Categorías, name: categories, widget: list, default: ["General"] }
+      - { label: Etiquetas, name: tags, widget: list, required: false }
+      - { label: Contenido, name: body, widget: markdown }

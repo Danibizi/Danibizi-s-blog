@@ -1,0 +1,39 @@
+baseURL: "https://dani8448.github.io/Danibizi-s-blog/"
+title: "Danibizi's Blog"
+theme: PaperMod
+locale: es
+defaultContentLanguage: e
+
+pagination:
+  pagerSize: 10
+
+params:
+  description: "Blog personal de Danibizi: ciberseguridad, writeups de HTB y más"
+  author: "Danibizi"
+  defaultTheme: dark
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  homeInfoParams:
+    Title: "Hola, soy Dani"
+    Content: "Escribo sobre ciberseguridad, resolución de máquinas de HTB y lo que me apetezca."
+  socialIcons:
+    - name: github
+      url: "https://github.com/Dani8448"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/daniel-berzosa-cadenas-1210333a5/"
+
+menu:
+  main:
+    - identifier: posts
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: htb
+      name: Writeups HTB
+      url: /categories/htb/
+      weight: 20
+    - identifier: about
+      name: Sobre mí
+      url: /about/
+      weight: 30
