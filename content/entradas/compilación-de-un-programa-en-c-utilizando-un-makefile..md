@@ -7,11 +7,9 @@ cover:
   image: /img/a_clean_modern_minimalist_tech_themed_banner_pos.png
   alt: ''
 tags:
-  - '#2ASIR'
-  - '#ASO'
+  - '2ASIR'
+  - 'ASO'
 ---
-
-# Compilación de un programa en C utilizando un Makefile.
 
 Para esta tarea compilare el progama lynx,el cual esta escrito en C,para ello descargare su repositorio oficial el cual es:
 

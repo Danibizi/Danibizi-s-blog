@@ -132,3 +132,22 @@ body, .list {
   transform: translateY(-3px);
   border-color: var(--accent);
 }
+
+/* ===== Entradas ===== */
+.post-single .post-title { font-size: 2.2rem; line-height: 1.2; }
+.post-single .post-description { color: var(--secondary); font-size: 1.05rem; }
+.post-content h2 {
+  margin-top: 2.2rem;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+}
+.post-content h3 { color: var(--accent); }
+.post-content pre { line-height: 1.5; }
+.post-content .highlight {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, .10);
+}
+.post-content code { border-radius: 6px; }
+.post-content img { border-radius: 10px; }
+.post-cover img, .entry-cover img { border-radius: 12px; }

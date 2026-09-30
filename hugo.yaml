@@ -19,7 +19,7 @@ params:
   mainSections: ["entradas", "writeups"]
   ShowReadingTime: true
   ShowCodeCopyButtons: true
-  ShowToc: true
+  ShowToc: false
   ShowBreadCrumbs: true
 
   label:

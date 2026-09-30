@@ -22,6 +22,7 @@ collections:
       - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
       - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
       - label: "Portada"
         name: cover
         widget: object
@@ -64,6 +65,7 @@ collections:
       - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
       - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
       - label: "Portada"
         name: cover
         widget: object
@@ -106,6 +108,7 @@ collections:
       - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
       - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
       - label: "Portada"
         name: cover
         widget: object
