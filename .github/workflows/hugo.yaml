@@ -21,6 +21,7 @@ jobs:
         with:
           hugo-version: latest
           extended: true
+      - run: python3 scripts/redmine2md.py content
       - run: hugo --minify
       - uses: actions/upload-pages-artifact@v3
         with:

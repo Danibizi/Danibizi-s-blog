@@ -100,10 +100,12 @@ collections:
     label: "Entradas"
     label_singular: "Entrada"
     folder: content/entradas
+    filter: { field: formato, value: markdown }
     create: true
     extension: md
     slug: "{{slug}}"
     fields:
+      - { name: formato, widget: hidden, default: markdown }
       - { label: "Título", name: title, widget: string }
       - { label: "Fecha", name: date, widget: datetime }
       - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
@@ -118,6 +120,31 @@ collections:
           - { label: "Texto alternativo", name: alt, widget: string, required: false }
       - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
       - { label: "Contenido", name: body, widget: markdown }
+
+  - name: entradas_redmine
+    label: "Entradas · Redmine"
+    label_singular: "Entrada de Redmine"
+    folder: content/entradas
+    filter: { field: formato, value: redmine }
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { name: formato, widget: hidden, default: redmine }
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
+      - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
+      - label: "Portada"
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
+      - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
+      - { label: "Contenido (pega aquí el texto de Redmine tal cual)", name: body, widget: text }
 
   - name: pages
     label: "Páginas"
