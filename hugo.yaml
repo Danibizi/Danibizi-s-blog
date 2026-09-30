@@ -12,10 +12,11 @@ pagination:
 
 params:
   env: production
-  description: "Blog personal de Danibizi: ciberseguridad, writeups de HTB y más"
+  description: "Blog personal de Danibizi: ciberseguridad, writeups de HTB y TryHackMe y más"
   author: "Danibizi"
   defaultTheme: dark
   images: ["img/logo.png"]
+  mainSections: ["entradas", "writeups"]
   ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowToc: true
@@ -35,16 +36,16 @@ params:
   profileMode:
     enabled: true
     title: "Danibizi"
-    subtitle: "Ciberseguridad, writeups de Hack The Box y otras cosas que me apetece contar."
+    subtitle: "Ciberseguridad, writeups de Hack The Box y TryHackMe, y otras cosas que me apetece contar."
     imageUrl: "img/logo.png"
     imageTitle: "Danibizi"
-    imageWidth: 140
-    imageHeight: 140
+    imageWidth: 150
+    imageHeight: 150
     buttons:
-      - name: Blog
-        url: posts/
-      - name: Writeups HTB
-        url: categories/htb/
+      - name: Writeups
+        url: writeups/
+      - name: Entradas
+        url: entradas/
 
   socialIcons:
     - name: github
@@ -52,13 +53,13 @@ params:
 
 menu:
   main:
-    - identifier: posts
-      name: Blog
-      pageRef: /posts
+    - identifier: entradas
+      name: Entradas
+      pageRef: /entradas
       weight: 10
-    - identifier: htb
-      name: Writeups HTB
-      pageRef: /categories/htb
+    - identifier: writeups
+      name: Writeups
+      pageRef: /writeups
       weight: 20
     - identifier: about
       name: Sobre mí
