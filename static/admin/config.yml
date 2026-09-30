@@ -124,4 +124,5 @@ collections:
         file: content/about.md
         fields:
           - { label: "Título", name: title, widget: string }
+          - { name: layout, widget: hidden, default: about }
           - { label: "Contenido", name: body, widget: markdown }

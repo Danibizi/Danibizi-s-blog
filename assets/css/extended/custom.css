@@ -69,3 +69,66 @@ body, .list {
 .post-content a { color: var(--accent); }
 .post-content blockquote { border-inline-start: 3px solid var(--accent); }
 .highlight { border: 1px solid var(--border); border-radius: 10px; }
+
+/* ===== Página Sobre mí ===== */
+.about-page { max-width: 760px; margin: 0 auto; padding: 8px 0 40px; }
+
+.about-header { text-align: center; margin: 24px 0 28px; }
+.about-title {
+  font-size: 2.6rem;
+  margin: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.about-header::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+/* bloque de terminal */
+.about-page .highlight {
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 0 28px rgba(56, 189, 248, .18);
+}
+.about-page .highlight pre { padding: 6px 4px; }
+.about-page .copy-code { display: none; }
+
+.about-page .post-content p { line-height: 1.75; }
+
+/* subtítulos */
+.about-page .post-content h2 {
+  margin-top: 40px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+/* lista de contacto como tarjetas */
+.about-page .post-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.about-page .post-content ul li {
+  margin: 0;
+  padding: 16px 18px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, .10);
+  transition: transform .18s ease, border-color .18s ease;
+}
+.about-page .post-content ul li:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
