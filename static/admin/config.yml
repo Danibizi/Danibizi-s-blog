@@ -1,3 +1,6 @@
+site_url: https://danibizi.github.io/Danibizi-s-blog/
+display_url: https://danibizi.github.io/Danibizi-s-blog/
+
 backend:
   name: github
   repo: Danibizi/Danibizi-s-blog
