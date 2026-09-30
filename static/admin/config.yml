@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Dani8448/Danibizi-s-blog
+  repo: Danibizi/Danibizi-s-blog
   branch: main
 
 media_folder: static/img
