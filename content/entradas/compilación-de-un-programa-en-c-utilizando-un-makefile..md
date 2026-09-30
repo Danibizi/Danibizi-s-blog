@@ -8,15 +8,18 @@ cover:
   alt: ''
 tags:
   - '#2ASIR'
+  - '#ASO'
 ---
+
+# Compilación de un programa en C utilizando un Makefile.
 
 Para esta tarea compilare el progama lynx,el cual esta escrito en C,para ello descargare su repositorio oficial el cual es:
 
-https://invisible-island.net/archives/lynx/tarballs/lynx2.9.3.tar.gz
+[https://invisible-island.net/archives/lynx/tarballs/lynx2.9.3.tar.gz](https://invisible-island.net/archives/lynx/tarballs/lynx2.9.3.tar.gz)
 
 Al descomprimir:
 
-<pre>
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ ls
 
@@ -26,17 +29,17 @@ aclocal.m4   CHANGES       configure.in    docs          LYMessages_en.h  makefi
 
 AUTHORS      clean.com     COPYHEADER      fixed512.com  lynx.cfg         makefile.msc  po        test
 
-bcblibs.bat  config.guess  COPYHEADER.asc  INSTALLATION  lynx_help        makelynx.bat  PROBLEMS  userdefs.h
+bcblibs.bat  config.guess  COPYHEADER.asc  INSTALLATION  lynx_help        makelynx.bat   PROBLEMS  userdefs.h
 
-BUILD        config.hin    COPYING         install-sh    lynx.hlp         make-msc.bat  README    VMSPrint.com
+BUILD        config.hin    COPYING         install-sh    lynx.hlp         make-msc.bat   README    VMSPrint.com
 
-build.bat    config.sub    COPYING.asc     lib           lynx.man         makew32.bat   samples   WWW
+build.bat    config.sub     COPYING.asc     lib           lynx.man         makew32.bat   samples   WWW
 
-</pre>
+\`\`\`
 
 Como vemos tenemos el fichero configure y el fichero makefile.in que el configure convertiran en makefile.
 
-<pre>
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ ls src/
 
@@ -46,55 +49,53 @@ chrtrans        HTSaveToFile.h  LYDownload.h    LYIcon.rc     LYMap.h        LYS
 
 cmu_tcp.opt     LYBookmark.c    LYebcdic.c      LYJump.c      LYmktime.c     LYShowInfo.c   makefile.in        TRSTable.h
 
-decc.opt        LYBookmark.h    LYEdit.c        LYJump.h      LYNews.c       LYShowInfo.h   makefile.wsl       UCAuto.c
+decc.opt        LYBookmark.h    LYEdit.c        LYJump.h      LYNews.c       LYShowInfo.h   makefile.wsl        UCAuto.c
 
 DefaultStyle.c  LYCgi.c         LYEdit.h        LYJustify.h   LYNews.h       LYSignal.h     mktime.c           UCAuto.h
 
-descrip.mms     LYCgi.h         LYEditmap.c     LYKeymap.c    LYOptions.c    LYStrings.c    multinet.opt       UCAux.c
+descrip.mms     LYCgi.h        LYEditmap.c     LYKeymap.c    LYOptions.c    LYStrings.c    multinet.opt       UCAux.c
 
 gnuc.opt        LYCharSets.c    LYexit.c        LYKeymap.h    LYOptions.h    LYStrings.h    multinet_ucx.opt   UCdomap.c
 
-GridText.c      LYCharSets.h    LYExtern.c      LYLeaks.c     LYPrettySrc.c  LYStructs.h    parsdate.c         UCdomap.h
+GridText.c      LYCharSets.h   LYExtern.c      LYLeaks.c     LYPrettySrc.c  LYStructs.h    parsdate.c          UCdomap.h
 
-GridText.h      LYCharUtils.c   LYExtern.h      LYList.c      LYPrettySrc.h  LYStyle.c      parsdate.h         ucxolb.opt
+GridText.h      LYCharUtils.c  LYExtern.h      LYList.c      LYPrettySrc.h   LYStyle.c      parsdate.h           ucxolb.opt
 
-HTAlert.c       LYCharUtils.h   LYForms.c       LYList.h      LYPrint.c      LYStyle.h      parsdate.y         ucxshr.opt
+HTAlert.c        LYCharUtils.h  LYForms.c       LYList.h      LYPrint.c      LYTraversal.c  socketshr_tcp.opt    win_tcp.opt
 
-HTAlert.h       LYCharVals.h    LYGCurses.h     LYLocal.c     LYPrint.h      LYTraversal.c  socketshr_tcp.opt  vaxc.opt
+HTFont.h        LYClean.c      LYGetFile.c     LYLocal.h     LYrcFile.c      LYTraversal.h  strstr.c             wcwidth.c
 
-HTFont.h        LYClean.c       LYGetFile.c     LYLocal.h     LYrcFile.c     LYTraversal.h  strstr.c           wcwidth.c
+HTForms.h        LYClean.h      LYGetFile.h    LYMail.c      LYrcFile.h      LYUpload.c     structdump.h          wcwidth.h
 
-HTForms.h       LYClean.h       LYGetFile.h     LYMail.c      LYrcFile.h     LYUpload.c     structdump.h       wcwidth.h
+HTFWriter.c      LYCookie.c     LYGlobalDefs.h LYMail.h      LYReadCFG.c     LYUpload.h     tcpipolb.opt          Xsystem.c
 
-HTFWriter.c     LYCookie.c      LYGlobalDefs.h  LYMail.h      LYReadCFG.c    LYUpload.h     tcpipolb.opt       win_tcp.opt
+HTInit.c         LYCookie.h     LYHash.c        LYMain.c      LYReadCFG.h     LYUtils.c      tcpipshr.opt
 
-HTInit.c        LYCookie.h      LYHash.c        LYMain.c      LYReadCFG.h    LYUtils.c      tcpipshr.opt       Xsystem.c
+HTML.c           LYCurses.c     LYHash.h        LYMainLoop.c  LYSearch.c      LYUtils.h      tcpwareolb.opt
 
-HTML.c          LYCurses.c      LYHash.h        LYMainLoop.c  LYSearch.c     LYUtils.h      tcpwareolb.opt
+HTML.h           LYCurses.h     LYHistory.c     LYMainLoop.h  LYSearch.h      LYVMSdef.h     tcpwareshr.opt
 
-HTML.h          LYCurses.h      LYHistory.c     LYMainLoop.h  LYSearch.h     LYVMSdef.h     tcpwareshr.opt
-
-</pre>
+\`\`\`
 
 Podemos ver que esta escrito en C,antes que nada vamos a descargar las dependecias,en caso de tenerlas para que no falle nada:
 
-<pre>
+\`\`\`
 
 sudo apt build-dep lynx
 
-</pre>
+\`\`\`
 
 Podemos proceder con el configure:
 
-<pre>
+\`\`\`
 
 ./configure --prefix=/opt/lynx-2.9.3
 
-</pre>
+\`\`\`
 
 Una vez hecho el configure podemos ver que aparece el makefile:
 
-<pre>
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ ls
 
@@ -110,25 +111,23 @@ BUILD        config.guess  COPYHEADER      help_files.sed  lynx.cfg         make
 
 build.bat    config.hin    COPYHEADER.asc  INSTALLATION    lynx_cfg.h       makefile.msc  po            userdefs.h
 
-build.com    config.log    COPYING         install-sh      lynx_help        makelynx.bat  PROBLEMS      VMSPrint.com
+build.com    config.log    COPYING         install-sh      lynx_help        makelynx.bat   PROBLEMS      VMSPrint.com
 
-
-</pre>
+\`\`\`
 
 Ahora para compilar tendremos que tener instalado make y el compilador GCC
 
-<pre>
+\`\`\`
 
 sudo apt install make
 
 sudo apt install build-essential
 
-</pre>
+\`\`\`
 
 Una vez hecho el comando make,si todo ha salido bien podemos proceder el make install:
 
-<pre>
-
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ sudo make install
 
@@ -168,14 +167,17 @@ usuario@debianprinter:/tmp/lynx/lynx2.9.3$ ls /opt/lynx-2.9.3/bin/
 
 lynx
 
-</pre>
+\`\`\`
 
 Y si ejecutamos el binario:
 
-<pre> usuario@debianprinter:/tmp/lynx/lynx2.9.3$ sudo /opt/lynx-2.9.3/bin/lynx google.com </pre>
+\`\`\`
 
+usuario@debianprinter:/tmp/lynx/lynx2.9.3$ sudo /opt/lynx-2.9.3/bin/lynx google.com
 
-<pre>
+\`\`\`
+
+\`\`\`
 
                                                                                                                                 Google
 
@@ -183,31 +185,17 @@ Y si ejecutamos el binario:
 
    Votre navigateur n'est plus pris en charge. Pour poursuivre votre recherche, passez M-\` une version rM-icenEn savoir plusplus
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Commands: Use arrow keys to move, '?' for help, 'q' to quit, '<-' to go back.
 
   Arrow keys: Up and Down to move.  Right to follow a link; Left to go back.
 
  H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list
 
-
-</pre>
+\`\`\`
 
 Como vemos ya lo tenemos instalado con exito,y si miramos lo tenemos sin usar paqueteria:
 
-<pre>
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ apt policy lynx
 
@@ -223,22 +211,21 @@ lynx:
 
         500 http://deb.debian.org/debian trixie/main amd64 Packages
 
-</pre>
+\`\`\`
 
 Como vemos debian ofrece la 2.9.2-1 y gracias a compilarlo,tenemos la 2.9.3,por tanto teniendo las funcionnalidades o mejoras que contenga esta version.
 
 Podemos ver estos cambios en:
 
-https://lynx.invisible-island.net/current/CHANGES.html#v2.8.1dev.1
+[https://lynx.invisible-island.net/current/CHANGES.html#v2.8.1dev.1](https://lynx.invisible-island.net/current/CHANGES.html#v2.8.1dev.1)
 
-
-<pre>
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ cat makefile | grep uninstall
 
 uninstall ::
 
-#	( cd $(PO_DIR) && $(MAKE_RECUR) uninstall )
+# ( cd $(PO_DIR) && $(MAKE_RECUR) uninstall )
 
 uninstall \
 
@@ -248,11 +235,11 @@ uninstall \
 
 uninstall-doc ::
 
-</pre>
+\`\`\`
 
 Como vemos en el makefile si hay uninstall entonces para desinstalarlo basta con hacer un make uninstall,y borrar  a mano el fichero donde hizimos el wget y el fichero del /opt ya que el uninstall lo que hace es borrar el binario y los archivos asociados a este,pero no donde tenemos el codigo fuente y tampoco las carpetas que contenian el binario
 
-<pre>
+\`\`\`
 
 sudo make uninstall
 
@@ -302,12 +289,12 @@ rm -f /opt/lynx-2.9.3/etc/lynx.lss
 
 	fi'
 
-</pre>
+\`\`\`
 
-<pre>
+\`\`\`
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ sudo rm -rf /opt/lynx-2.9.3/
 
 usuario@debianprinter:/tmp/lynx/lynx2.9.3$ sudo rm -rf ../../lynx/
 
-</pre>
+\`\`\`
