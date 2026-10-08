@@ -50,9 +50,9 @@ Cargo.lock    CONTRIBUTING.md  fuzz     pkg              scripts
 
 </pre>
 
-Como vemos ya tenemos el codigo fuente aqui, y para compilarlo usaremos cargo, que viene siendo el make en rust. Y @Cargo.toml@, el makefile.
+Como vemos ya tenemos el codigo fuente aqui, y para compilarlo usaremos cargo, que viene siendo el make en rust. Y `Cargo.toml`, el makefile.
 
-La última versión (15.2.0) pide rustc 1.96 y mi rustc es el 1.85.1, así que da error. Por eso cambio a la versión 14.1.1 con @git checkout@.
+La última versión (15.2.0) pide rustc 1.96 y mi rustc es el 1.85.1, así que da error. Por eso cambio a la versión 14.1.1 con` git checkout`.
 
 <pre>
 
@@ -133,7 +133,6 @@ rg: ripgrep requires at least one pattern to execute a search
 </pre>
 
 Como vemos ya podemos hacer uso del binario.
-
 
 ### Desinstalación limpia
 
