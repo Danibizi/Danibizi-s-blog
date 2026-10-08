@@ -1,13 +1,8 @@
 ---
-title: "Sobre mí"
+title: Sobre mí
 layout: about
 draft: false
 ---
-
-~~~text
-[+] USER: danibizi
-[+] AREA: Pentesting | Ciberseguridad | Informática
-~~~
 
 ¡Buenas! Soy Dani. Me mola la ciberseguridad, el pentesting y la informática en general.
 
