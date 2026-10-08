@@ -12,3 +12,6 @@ He montado este blog para ir subiendo cosas que me parecen interesantes y, sobre
 
 - **GitHub:** [github.com/Danibizi](https://github.com/Danibizi)
 - **Email:** [dbusiness300@gmail.com](mailto:dbusiness300@gmail.com)
+- **HTB:** [Perfil Hack the box](https://app.hackthebox.com/users/3316500?profile-top-tab=machines&ownership-period=1M&profile-bottom-tab=prolabs)
+- **Thm:** [Perfil tryhackme](https://tryhackme.com/p/dalx8448)
+- **Linkendin:**  [https://www.linkedin.com/in/daniel-berzosa-cadenas-1210333a5/](https://www.linkedin.com/in/daniel-berzosa-cadenas-1210333a5/)
