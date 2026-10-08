@@ -1,4 +1,4 @@
 ---
 title: "Hack The Box"
-description: "Writeups de máquinas retiradas de HTB"
+description: "Writeups de máquinas en HTB"
 ---
