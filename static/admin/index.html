@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Panel de Danibizi</title>
+</head>
+<body>
+  <script src="redmine.js"></script>
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script>
+    /* Al guardar: si hay texto en "Pegar desde Redmine", se convierte a Markdown
+       y pasa a ser el Contenido de la entrada. */
+    (function registrar() {
+      if (!(window.CMS && window.CMS.registerEventListener)) { return setTimeout(registrar, 100); }
+      window.CMS.registerEventListener({
+        name: "preSave",
+        handler: function (args) {
+          var data = args.entry.get("data");
+          var texto = data.get("redmine");
+          if (texto && String(texto).trim()) {
+            var md = window.redmineToMarkdown(String(texto), String(data.get("title") || ""));
+            data = data.set("body", md);
+          }
+          return data.delete("redmine");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

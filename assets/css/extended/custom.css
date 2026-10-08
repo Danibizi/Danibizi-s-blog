@@ -1,0 +1,184 @@
+/* ==========================================================
+   Danibizi's Blog - azul noche + azul eléctrico (del logo)
+   Siempre oscuro. Las variables se fijan en todos los selectores
+   que usa PaperMod para que ningún modo las pise.
+   ========================================================== */
+:root, body, body.dark, .dark, .list, .dark.list {
+  --accent: #4da3ff;
+  --accent-soft: rgba(77, 163, 255, .14);
+  --accent-line: rgba(77, 163, 255, .38);
+  --cyan: #2fd9f0;
+  --theme: #060e1d;
+  --entry: #0c1830;
+  --primary: #eaf3ff;
+  --secondary: #8ea9d4;
+  --tertiary: #17284a;
+  --content: #cfdef5;
+  --code-block-bg: #07122a;
+  --code-bg: #112347;
+  --border: #172a4d;
+  --radius: 12px;
+  --mono: ui-monospace, "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+}
+
+html { background: #060e1d; }
+body, body.dark, body.list, .dark.list {
+  background:
+    radial-gradient(1000px 480px at 50% -160px, rgba(45, 120, 255, .30), transparent 72%),
+    #060e1d !important;
+  background-repeat: no-repeat !important;
+  color: var(--content);
+}
+::selection { background: rgba(77, 163, 255, .35); color: #fff; }
+
+/* ---------- cabecera ---------- */
+.header {
+  background: rgba(6, 14, 29, .78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.logo a { font-weight: 700; letter-spacing: .2px; color: var(--primary); }
+#menu a { color: var(--secondary); }
+#menu a:hover, #menu a.active { color: var(--primary); }
+#menu a.active { border-bottom: 2px solid var(--accent); }
+.footer, .footer a { color: var(--secondary); }
+
+/* ---------- portada ---------- */
+.profile_inner img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--accent), 0 0 48px rgba(47, 217, 240, .38);
+}
+.profile_inner h1 { color: var(--primary); font-size: 2.4rem; letter-spacing: -.5px; }
+.profile_inner > span { color: var(--secondary); }
+.profile_inner .button {
+  background: var(--accent);
+  color: #04101f;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0 22px;
+}
+.profile_inner .button:hover { background: #7bbcff; }
+.social-icons a { color: var(--secondary); }
+.social-icons a:hover { color: var(--accent); }
+
+/* ---------- listados ---------- */
+.page-header h1, .main > .page-header h1 { color: var(--primary); }
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: border-color .18s ease, transform .18s ease;
+}
+.post-entry:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.entry-header h2 { color: var(--primary); }
+.entry-content { color: var(--secondary); }
+.entry-footer { color: var(--secondary); }
+.entry-cover img { border-radius: 10px; }
+.terms-tags li a, .post-tags a {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  color: var(--accent);
+  border-radius: 999px;
+}
+
+/* ---------- entrada ---------- */
+.post-title { color: var(--primary); letter-spacing: -.4px; line-height: 1.2; }
+.post-description { color: var(--secondary); }
+.post-meta, .breadcrumbs, .breadcrumbs a { color: var(--secondary); }
+.post-single .entry-cover img, .post-single figure.entry-cover img {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+.post-content { font-size: 1.04rem; line-height: 1.75; color: var(--content); }
+.post-content h2 {
+  margin-top: 2.4rem;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+  color: var(--primary);
+}
+.post-content h3 { color: var(--accent); margin-top: 1.8rem; }
+.post-content a { color: var(--accent); box-shadow: none; border-bottom: 1px solid var(--accent-line); }
+.post-content a:hover { color: #8cc6ff; border-bottom-color: #8cc6ff; }
+.post-content blockquote {
+  border-inline-start: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+  padding: 4px 18px;
+}
+.post-content img { border-radius: 10px; }
+.post-content hr { border-color: var(--border); }
+.post-content table th, .post-content table td { border-color: var(--border); }
+.post-content table th { background: var(--code-bg); color: var(--primary); }
+
+/* ---------- código ---------- */
+.post-content :not(pre) > code {
+  background: var(--code-bg);
+  color: #9fd0ff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-family: var(--mono);
+}
+.post-content .highlight, .post-content pre {
+  margin: 1.3rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--code-block-bg) !important;
+}
+.post-content pre code {
+  display: block;
+  background: var(--code-block-bg) !important;
+  color: #d4e3ff;
+  padding: 16px 18px;
+  font-family: var(--mono);
+  font-size: .9rem;
+  line-height: 1.55;
+  white-space: pre;
+  word-break: normal;
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+.copy-code { background: var(--code-bg); color: var(--secondary); border-radius: 6px; }
+
+/* ---------- índice, navegación ---------- */
+.toc { background: var(--entry); border: 1px solid var(--border); border-radius: var(--radius); }
+.paginav a, .pagination a { color: var(--accent); }
+.paginav { border: 1px solid var(--border); border-radius: var(--radius); }
+
+/* ---------- Sobre mí ---------- */
+.about-page { max-width: 720px; margin: 0 auto; padding: 8px 0 40px; }
+.about-header { margin: 24px 0 26px; }
+.about-title { font-size: 2.6rem; margin: 0; color: var(--primary); letter-spacing: -.6px; }
+.about-header::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.about-page .highlight { border-color: var(--accent-line); box-shadow: 0 0 28px rgba(47, 217, 240, .14); }
+.about-page .copy-code { display: none; }
+.about-page .post-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.about-page .post-content ul li {
+  margin: 0;
+  padding: 14px 18px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.about-page .post-content ul li:hover { border-color: var(--accent-line); }
+
+@media (prefers-reduced-motion: reduce) {
+  .post-entry { transition: none; }
+  .post-entry:hover { transform: none; }
+}

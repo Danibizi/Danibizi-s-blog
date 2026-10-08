@@ -1,0 +1,85 @@
+baseURL: "https://danibizi.github.io/Danibizi-s-blog/"
+title: "Danibizi's Blog"
+theme: PaperMod
+locale: es
+defaultContentLanguage: es
+timeZone: "Europe/Madrid"
+buildFuture: true
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 9
+
+markup:
+  goldmark:
+    extensions:
+      typographer: false
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: false
+    lineNos: false
+
+params:
+  env: production
+  description: "Blog personal de Danibizi: ciberseguridad, writeups de Hack The Box y TryHackMe, y más"
+  author: "Danibizi"
+  defaultTheme: dark
+  disableThemeToggle: true
+  images: ["img/logo.png"]
+  mainSections: ["entradas", "writeups"]
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowToc: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowShareButtons: false
+
+  cover:
+    linkFullImages: false
+    responsiveImages: false
+
+  label:
+    text: "Danibizi"
+    icon: "img/logo.png"
+    iconHeight: 30
+
+  assets:
+    disableHLJS: true
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+
+  profileMode:
+    enabled: true
+    title: "Danibizi"
+    subtitle: "Ciberseguridad, writeups de Hack The Box y TryHackMe, y otras cosas que me apetece contar."
+    imageUrl: "img/logo.png"
+    imageTitle: "Danibizi"
+    imageWidth: 150
+    imageHeight: 150
+    buttons:
+      - name: Writeups
+        url: writeups/
+      - name: Entradas
+        url: entradas/
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/Danibizi"
+
+menu:
+  main:
+    - identifier: entradas
+      name: Entradas
+      pageRef: /entradas
+      weight: 10
+    - identifier: writeups
+      name: Writeups
+      pageRef: /writeups
+      weight: 20
+    - identifier: about
+      name: Sobre mí
+      pageRef: /about
+      weight: 30

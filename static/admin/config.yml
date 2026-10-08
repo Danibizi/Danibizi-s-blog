@@ -1,0 +1,146 @@
+site_url: https://danibizi.github.io/Danibizi-s-blog/
+display_url: https://danibizi.github.io/Danibizi-s-blog/
+
+backend:
+  name: github
+  repo: Danibizi/Danibizi-s-blog
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: writeups_htb
+    label: "Writeups · Hack The Box"
+    label_singular: "Writeup HTB"
+    folder: content/writeups/htb
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
+      - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
+      - label: "Portada"
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
+      - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
+      - label: "Pegar desde Redmine (opcional)"
+        name: redmine
+        widget: text
+        required: false
+        hint: "Pega aquí el texto tal cual de Redmine y pulsa Guardar: se convierte solo y sustituye el Contenido."
+      - label: "Contenido"
+        name: body
+        widget: markdown
+        default: |
+          **Dificultad:** Fácil | **SO:** Linux
+
+          ## Resumen
+
+          ## Reconocimiento
+
+          ~~~bash
+          nmap -sC -sV -p- 10.10.11.x
+          ~~~
+
+          ## Acceso inicial (foothold)
+
+          ## Escalada de privilegios
+
+          ## Qué falló y cómo se mitigaría
+
+          ## Herramientas y lecciones aprendidas
+
+  - name: writeups_thm
+    label: "Writeups · TryHackMe"
+    label_singular: "Writeup TryHackMe"
+    folder: content/writeups/tryhackme
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
+      - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
+      - label: "Portada"
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
+      - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
+      - label: "Pegar desde Redmine (opcional)"
+        name: redmine
+        widget: text
+        required: false
+        hint: "Pega aquí el texto tal cual de Redmine y pulsa Guardar: se convierte solo y sustituye el Contenido."
+      - label: "Contenido"
+        name: body
+        widget: markdown
+        default: |
+          **Sala:** nombre | **Dificultad:** Fácil
+
+          ## Resumen
+
+          ## Reconocimiento
+
+          ~~~bash
+          nmap -sC -sV -p- 10.10.x.x
+          ~~~
+
+          ## Explotación
+
+          ## Escalada de privilegios
+
+          ## Qué falló y cómo se mitigaría
+
+          ## Lecciones aprendidas
+
+  - name: entradas
+    label: "Entradas"
+    label_singular: "Entrada"
+    folder: content/entradas
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: title, widget: string }
+      - { label: "Fecha", name: date, widget: datetime }
+      - { label: "Borrador (activado = NO se publica)", name: draft, widget: boolean, default: false }
+      - { label: "Descripción (para Google)", name: description, widget: text }
+      - { label: "Mostrar índice (tabla de contenidos)", name: ShowToc, widget: boolean, default: false }
+      - label: "Portada"
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: "Imagen", name: image, widget: image, required: false }
+          - { label: "Texto alternativo", name: alt, widget: string, required: false }
+      - { label: "Etiquetas (sin #)", name: tags, widget: list, required: false }
+      - label: "Pegar desde Redmine (opcional)"
+        name: redmine
+        widget: text
+        required: false
+        hint: "Pega aquí el texto tal cual de Redmine y pulsa Guardar: se convierte solo y sustituye el Contenido."
+      - { label: "Contenido", name: body, widget: markdown }
+
+  - name: pages
+    label: "Páginas"
+    files:
+      - label: "Sobre mí"
+        name: about
+        file: content/about.md
+        fields:
+          - { label: "Título", name: title, widget: string }
+          - { name: layout, widget: hidden, default: about }
+          - { label: "Contenido", name: body, widget: markdown }
