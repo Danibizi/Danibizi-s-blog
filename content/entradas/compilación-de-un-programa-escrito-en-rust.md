@@ -166,4 +166,6 @@ ls: no se puede acceder a '/usr/local/bin/rg': No existe el fichero o el directo
 
 </pre>
 
+```plain
 Como vemos se ha desinstalado con exito.
+```
