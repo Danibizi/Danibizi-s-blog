@@ -22,6 +22,9 @@ markup:
 
 params:
   env: production
+  analytics:
+    google:
+      SiteVerificationTag: "53MzaDUYlGmcpkfHCv45YbVcnVRRxBqKBmNvrd4uAsQ"
   description: "Blog personal de Danibizi: ciberseguridad, writeups de Hack The Box y TryHackMe, y más"
   author: "Danibizi"
   defaultTheme: dark
