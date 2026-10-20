@@ -9,7 +9,7 @@ description: |-
   -Very Easy 🟢
 ShowToc: true
 cover:
-  image: ''
+  image: /img/OOPSIE_ Guía de Ciberseguridad.png
   alt: ''
 tags: []
 ---
